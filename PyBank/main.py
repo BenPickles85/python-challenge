@@ -4,16 +4,14 @@ import csv
 
 #Set path for file
 csvpath = os.path.join("Resources", "budget_data.csv")
-#csvpath = r"C:\Users\Guest1\Documents\Bootcamp\Homework1\python-challenge\PyBank\Resources\budget_data.csv"
+
 
 #Define values
 month_changes = []
-
 total_prof_loss = 0
 month_change = 0
 greatest_increase = 0
 greatest_decrease = 0
-
 month_count = 0
 
 with open(csvpath) as csvfile:
@@ -68,6 +66,7 @@ print(f"Average change: ${average_change}")
 print(f"The month with the greatest increase in profit is {month_of_greatest_increase} with an increase of ${greatest_increase}")
 print(f"The month with the greatest decrease in profit is {month_of_greatest_decrease} with a decrease of ${greatest_decrease}")
 
+#Create and write to text file
 textpath = os.path.join("Analysis", "Financial_Analysis.txt")
 with open(textpath, 'w') as text_file:
     text_file.writelines('Financial Analysis\n-----------------------\n')
